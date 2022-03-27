@@ -17,7 +17,7 @@
   }
   .inputTd {
     width : 300px;
-    height : 30px;
+    height : 25px;
   }
 </style>
 <head>
@@ -28,26 +28,27 @@
 <input type=hidden name="orgid" value="00D0p0000000TBl">
 <input type=hidden name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6">
 <div id="content">
-<h1>23:48</h1>
+<h1>23:51</h1>
 <table>
   <tr><td colspan="2"><label for="title">고객문의 Q&A | 고객님의 문의사항을 귀담아 듣겠습니다.<label></td></tr>
   <tr>
     <td>제목</td>
-    <td><input class="inputTd" id="subject" name="subject" type="text"/></td>
+    <td colspan="2"><input class="inputTd" id="subject" name="subject" type="text"/></td>
   </tr>
   <tr>
     <td>작성자</td>
-    <td><input class="inputTd" id="inputAccountname__c" name="inputAccountname__c" type="text"/></td>
+    <td colspan="2"><input class="inputTd" id="inputAccountname__c" name="inputAccountname__c" type="text"/></td>
   </tr>
   <tr>
     <td>이메일</td>
-    <td><input class="inputTd" id="Email__c" name="Email__c" type="text"></td>
+    <td colspan="2"><input class="inputTd" id="Email__c" name="Email__c" type="text"></td>
   </tr>
   <tr>
     <td>제품</td>
     <td>
       <input class="inputTd" id="InputProductName__c" name="InputProductName__c" type="text">
-   
+    </td>
+    <td>
       <input id="Quantity__c" name="Quantity__c" placeholder="수량" size="3">
     </td>
   </tr>
@@ -55,9 +56,13 @@
     <th colspan="3"><textarea name="description"></textarea></th>
   </tr> 
   <tr>
-    <td colspan="3">
+    <td>
       <input type="submit" name="" value="목록">
+    </td>
+    <td>
       <input type="submit" name="submit" value="등록">
+    </td>
+    <td>
       <input type="submit" name="" value="취소">
     </td>
   </tr>
