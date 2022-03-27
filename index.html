@@ -5,62 +5,113 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<head>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('select[name= eSelection]').change(function() {
+
+			if($(this).val()=="1"){
+
+				$('#eAddr').val("");
+
+			} else {
+
+				$('#eAddr').val($(this).val());
+
+				$("#eAddr").attr("readonly", true);
+
+			}
+
+		});
+});
+</script>
+</head>
 <style>
-  table { margin : auto; width : 100%;}
+  table { margin : auto; width : 60%;}
   th, td {
     border-bottom: 1px solid #BDC3C7;
     padding: 10px;
 }
-.bottombox {
+.btn {
     text-align: center;
     padding: 20px 0 20px 0;
     margin: 15px 0 0 0;
     border-top: #efefef solid 1px;
 }
+input[type=text] {
+  width: 535px;
+  height: 25px;
+  font-size: 15px;
+  border: 0;
+  padding-left: 10px;
+  background-color: #efefef;//rgb(233, 233, 233);
+}
+#content #emailselect {
+height : 25px;
+width: 200px;
+  font-size: 15px;
+  border: 0;
+  padding-left: 10px;
+  background-color: #efefef;//rgb(233, 233, 233);
+}
+#content #Email__c {
+width : 315px;
+}
+#content #InputProductName__c {
+width : 315px;
+}
 </style>
-<head>
-</head>
 <body>
 <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 <input type="hidden" name="debug" value="1"> 
 <input type=hidden name="orgid" value="00D0p0000000TBl">
 <input type=hidden name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6">
-<div id="content">
-<h1>24:22</h1>
-<table>
-  <tr><td colspan="2"><label for="title">고객문의 Q&A | 고객님의 문의사항을 귀담아 듣겠습니다.<label></td></tr>
-  <tr>
-    <td>제목</td>
-    <td>
-      <input class="input" id="subject" name="subject" type="text"/>
-    </td>
-  </tr>
-  <tr>
-    <td>작성자</td>
-    <td>
-      <input class="input" id="inputAccountname__c" name="inputAccountname__c" type="text"/>
-    </td>
-  </tr>
-  <tr>
-    <td>이메일</td>
-    <td><input class="input" id="Email__c" name="Email__c" type="text"></td>
-  </tr>
-  <tr>
-    <td>제품</td>
-    <td>
-      <input id="InputProductName__c" name="InputProductName__c" type="text">
-      <input id="Quantity__c" name="Quantity__c" placeholder="수량" size="3">
-    </td>
-  </tr>
-  <tr> 
-    <td colspan="2"><textarea name="description"></textarea></td>
-  </tr>
-</table>
-  <div class="bottombox">
-    <input type="submit" name="" value="목록">
-    <input type="submit" name="submit" value="등록">
-    <input type="submit" name="" value="취소">
+  <div id="content">
+    <h1>24:28</h1>
+    <table>
+      <tr><td colspan="2"><label for="title">고객문의 Q&A | 고객님의 문의사항을 귀담아 듣겠습니다.<label></td></tr>
+      <tr>
+        <td>제목</td>
+        <td>
+          <input class="input" id="subject" name="subject" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>작성자</td>
+        <td>
+          <input class="input" id="inputAccountname__c" name="inputAccountname__c" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>이메일</td>
+        <td>
+          <input id="Email__c" name="Email__c" type="text"> @
+          <input class="" id="eAddr" class="box">
+          <select id="eSelection" name="eSelection">
+            <option value="1" selected="selected">직접입력</option>
+            <option value="gmail.com">gmail.com</option>
+            <option value="naver.com">naver.com</option>
+            <option value="naver.com">daum.net</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>제품</td>
+        <td>
+          <input id="InputProductName__c" name="InputProductName__c" type="text">
+          <input id="Quantity__c" name="Quantity__c" placeholder="수량" size="3">
+        </td>
+      </tr>
+      <tr> 
+        <td colspan="2"><textarea name="description"></textarea></td>
+      </tr>
+    </table>
+    <div class="btn">
+      <input type="submit" name="" value="목록">
+      <input type="submit" name="submit" value="등록">
+      <input type="submit" name="" value="취소">
+    </div>
   </div>
-</form>
-</div>
+  </form>
 </body>
