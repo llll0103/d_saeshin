@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saeshin United</title>
 </head>
 <style>
     body {
@@ -15,20 +15,6 @@
         margin: 0;
         padding: 0;
     }
-
-    #content {
-        width : 50%;
-        margin: auto;
-    }
-     <!-- table {
-        <!-- table-layout: fixed; -->
-        border: 1px solid #d7d5d5;
-        border-left: 0;
-        border-right: 0;
-        line-height: 180%;
-        margin : auto;
-    } -->
-
     table {
         width: 80%;
         border: 0;
@@ -40,6 +26,7 @@
         text-indent: initial;
         border-spacing: 2px;
         border-color: grey;
+        margin: auto;
     }
 
     tbody {
@@ -59,31 +46,6 @@
         vertical-align: top;
     }
 
-    #content th {
-        width: 110px;
-        padding: 10px 0 8px 20px;
-        border-top: 1px solid #e8e8e8;
-        border-right: 1px solid #e8e8e8;
-        background-color: #fbfafa;
-        text-align: left;
-        font-weight: normal;
-        vertical-align: middle;
-    }
-
-    #content td {
-        width: auto;
-        padding: 10px 0 8px 10px;
-        border-top: 1px solid #e8e8e8;
-    }
-
-    #subject, #email__c {
-        padding: 0 3px;
-        width: 390px;
-        height: 19px;
-        padding: 3px 0 0 9px;
-        border: 1px solid #d5d5d5;
-    }
-    
     input {
         padding: 2px 2px 2px 4px;
         border: 1px solid #d9d9d9;
@@ -97,69 +59,124 @@
         vertical-align: middle;
     }
 
+    input[type=submit] {
+        background-color: #d5d5d5;
+        padding: 6px;
+        border: 0;
+        border-radius: 25%;
+        
+    }
+
+    input[type=text], textarea {
+        height : 19px;
+        width: 600px;
+        padding: 3px 0 0 9px;
+        border: 1px solid #d5d5d5;
+        
+    }
+
+    textarea {
+        height : 200px;
+    }
+    
     .tdTit {
         width : 75px !important;
     }
+    
     .btn {
         text-align: center;
         padding: 10px 0 20px 0;
         margin: 10px 0 0 0;
     }
-    input[type=submit] {
-       background-color: #d5d5d5;
-       padding: 6px;
-       border: 0;
-       border-radius: 25%;
+
+    #subject {
+        width: 600px;
+    }
+
+    #email, #inputAccount {
+        width : 218px;
+        padding: 0 3px;
+        padding: 3px 0 0 9px;
+        border: 1px solid #d5d5d5;
+    }
+
+    #content td {
+        width: auto;
+        padding: 10px 0 8px 10px;
+        border-top: 1px solid #e8e8e8;
+    }
+
+    #content {
+        width : 50%;
+        margin: auto;
+    }
+
+    #content th {
+        width: 110px;
+        padding: 10px 0 8px 20px;
+        border-top: 1px solid #e8e8e8;
+        border-right: 1px solid #e8e8e8;
+        background-color: #fbfafa;
+        text-align: left;
+        font-weight: normal;
+        vertical-align: middle;
     }
 </style>
 <body>
-    <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
-    <input type="hidden" name="debug" value="1"> 
-    <input type=hidden name="orgid" value="00D0p0000000TBl">
-    <input type=hidden name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6">
     <div id="content">
-        
-        <h1>12:53</h1>
-        <table border="1" summary>
-          <tr><td colspan="2"><label for="title" style=" font-weight : bold;">고객문의 Q&A | </label> <label style="color : #BDC3C7; font-size : 12px;"> 고객님의 문의사항을 귀담아 듣겠습니다.<label></td></tr>
+        <h1>14:01</h1>
         <hr>
-          <tr>
-            <td class="tdTit">제목</td>
-            <td>
-              <input class="input" id="subject" name="subject" type="text"/>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdTit">작성자</td>
-            <td>
-              <input class="input" id="inputAccountname__c" name="inputAccountname__c" type="text"/>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdTit">이메일</td>
-            <td>
-        <input id="Email__c" name="Email__c" type="text"> 
-        </td>
-          </tr>
-          <tr>
-            <td class="tdTit">제품</td>
-            <td>
-              <input id="InputProductName__c" name="InputProductName__c" type="text">
-              <input id="Quantity__c" name="Quantity__c" placeholder="수량" size="3">
-            </td>
-          </tr>
-          <tr> 
-            <td colspan="2"><textarea name="description"></textarea></td>
-          </tr>
-        </table>
-        <hr>
-          <div class="btn">
-            <input type="submit" name="" value="목록">
-            <input type="submit" name="submit" value="등록">
-            <input type="submit" name="" value="취소">
-          </div>
-        
-        </div>
+        <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+            <input type="hidden" name="debug" value="1"> 
+            <input type=hidden name="orgid" value="00D0p0000000TBl">
+            <input type=hidden name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6">
+            <table border="1" summary>
+                <tr>
+                    <td colspan="4" for="title">
+                        <label style="font-weight : bold; font-size : 17px;">고객문의 Q&A |</label>
+                    <!-- </td>
+                    <td colspan="3"> -->
+                        <label style="color : #BDC3C7; font-size : 12px;"> 고객님의 문의사항을 귀담아 듣겠습니다.<label></label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td colspan="3"><input id="subject" name="subject" type="text"></td>
+                </tr>
+                <tr>
+                    <th>작성자</th>
+                    <td><input id="inputAccount" name="inputAccountname__c" type="text"></td>
+                    <th>이메일</th>
+                    <td><input id="email" name="email__c" type="text"></td>
+                </tr>
+                <tr>
+                    <th>제품</th>
+                    <td colspan="3">
+                        <input id="inputProdudctname" name="inputProductname__c" size="26">
+                        <input id="quantity" name="quantity__c" placeholder="수량" size="2">
+                    </td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td colspan="4"><textarea name="description"></textarea></td>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        <input type="submit" name="" value="목록">
+                    </td>
+                    <td colspan="3">
+                        <input type="submit" name="submit" value="등록">
+                        <input type="submit" name="" value="취소">
+                    </td>
+                </tr> -->
+            </table>
+            <hr>
+            <div class="btn">
+                <input type="submit" name="" value="목록">
+                <input type="submit" name="submit" value="등록">
+                <input type="submit" name="" value="취소">
+            </div>
         </form>
+    </div>
 </body>
 </html>
