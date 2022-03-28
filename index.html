@@ -120,10 +120,17 @@
         font-weight: normal;
         vertical-align: middle;
     }
+    
+    .btn #backBtn {
+        text-align : left;
+    }
+    .btn #submitBtn {
+        text-align : right;
+    }
 </style>
 <body>
     <div id="content">
-        <h1>테스트_세신</h1>
+        <h1>16:03</h1>
         <hr>
         <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
             <input type="hidden" name="debug" value="1"> 
@@ -144,15 +151,15 @@
                 </tr>
                 <tr>
                     <th>작성자</th>
-                    <td><input id="inputAccount" name="inputAccountname__c" type="text"></td>
+                    <td><input id="inputAccountname__c" name="inputAccountname__c" type="text"></td>
                     <th>이메일</th>
-                    <td><input id="email" name="email__c" type="text"></td>
+                    <td><input id="email__c" name="email__c" type="text"></td>
                 </tr>
                 <tr>
                     <th>제품</th>
                     <td colspan="3">
-                        <input id="inputProdudctname" name="inputProductname__c" size="26">
-                        <input id="quantity" name="quantity__c" placeholder="수량" size="2">
+                        <input id="inputProductname__c" name="inputProductname__c" size="26">
+                        <input id="quantity__c" name="quantity__c" placeholder="수량" size="2">
                     </td>
                 </tr>
                 <tr>
@@ -170,8 +177,10 @@
                 </tr> -->
             </table>
             <hr>
-            <div class="btn">
+            <div class="btn" id="backBtn">
                 <input type="submit" name="" value="목록">
+            </div>
+            <div class="btn" id="submitBtn">
                 <input type="submit" name="submit" value="등록">
                 <input type="submit" name="" value="취소">
             </div>
