@@ -64,9 +64,9 @@
         border: 0;
         border-radius: 25%;
         transition: all 0.15s;
-        font-weight: bold;
+        
     }
-    
+
     input[type=submit]:hover {
         background-color: #FFFFFF;
         color : #000000;
@@ -74,7 +74,7 @@
 
     input[type=text], textarea {
         height : 19px;
-        width: 98%;
+        width: 600px;
         padding: 3px 0 0 9px;
         border: 1px solid #d5d5d5;
         
@@ -95,11 +95,11 @@
     }
 
     #subject {
-        width: 98%;
+        width: 600px;
     }
 
     #Email__c, #inputAccountname__c {
-        width : 95%;
+        width : 190px;
         padding: 0 3px;
         padding: 3px 0 0 9px;
         border: 1px solid #d5d5d5;
@@ -129,7 +129,6 @@
 </style>
 <body>
     <div id="content">
-        <h3>16:10</h3>
         <img src="./세신유나이티드_로고.png"/>
         <hr>
         <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
@@ -142,7 +141,7 @@
                         <label style="font-weight : bold; font-size : 17px;">고객문의 Q&A |</label>
                     <!-- </td>
                     <td colspan="3"> -->
-                        <label style="color : #BDBDBD; font-size : 12px;"> 고객님의 문의사항을 귀담아 듣겠습니다.<label></label>
+                        <label style="color : #BDC3C7; font-size : 12px;"> 고객님의 문의사항을 귀담아 듣겠습니다.<label></label>
                     </td>
                 </tr>
                 <tr>
@@ -158,8 +157,8 @@
                 <tr>
                     <th>제품</th>
                     <td colspan="3">
-                        <input id="InputProductName__c" name="InputProductName__c" size="26">
-                        <input id="Quantity__c" name="Quantity__c" placeholder="수량" size="2">
+                        <input id="inputProductname__c" name="inputProductname__c" size="28">
+                        <input id="quantity__c" name="quantity__c" placeholder="수량" size="2">
                     </td>
                 </tr>
                 <tr>
