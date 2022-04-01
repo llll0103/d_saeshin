@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="saeshin_css.css" >
+    <link rel="stylesheet" type="text/css" href="/css/saeshin_css.css" >
     <title>Saeshin United</title>
 </head>
+<script>
+    function test() {
+        alert("!!!!!!!!1");
+        //location.href="/after_insert/aft_insert.html";
+      setTimeout("location.href='/after_insert/aft_insert.html'",0);
+    }
+</script>
 <body>
-    <div id="content">
-        <img src="./세신유나이티드_로고.png"/>
+    <div id="wrap">
+        <img src="/img/세신유나이티드_로고.png"/>
         <hr>
         <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
-            <input type="hidden" name="debug" value="1"> 
-            <input type=hidden name="orgid" value="00D0p0000000TBl">
-            <input type=hidden name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6">
+            <!-- <input type="hidden" name="debug" value="1">  -->
+            <input type="hidden" name="orgid" value="00D0p0000000TBl">
+            <!-- <input type="hidden" name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6"> -->
+            <!-- <input type="hidden" name="retURL" value="/after_insert/aft_insert.html"> -->
             <table border="1" summary>
                 <tr>
                     <td colspan="4" for="title">
@@ -57,7 +65,7 @@
             <hr>
             <div class="btn" id="backBtn">
                 <input type="submit" name="" value="목록">
-                <input type="submit" name="submit" value="등록">
+                <input type="submit" name="submit" value="등록" onclick="test()">
                 <input type="submit" name="" value="취소">
             </div>
         </form>
