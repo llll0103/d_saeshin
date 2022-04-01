@@ -99,18 +99,18 @@
     #Quantity__c {
         width : 100px !important;
     }
-    #content td {
+    #wrap td {
         width: auto;
         padding: 10px 0 8px 10px;
         border-top: 1px solid #e8e8e8;
     }
 
-    #content {
+    #wrap {
         width :900px;
         margin: auto;
     }
 
-    #content th {
+    #wrap th {
         width: 110px;
         padding: 10px 0 8px 20px;
         border-top: 1px solid #e8e8e8;
@@ -119,4 +119,17 @@
         text-align: left;
         font-weight: normal;
         vertical-align: middle;
+    }
+
+    #content {
+        text-align: center;
+        padding: 60px;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    #tt {
+        color : #848484;
     }
