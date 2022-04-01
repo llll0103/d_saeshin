@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./saeshin_css.css" >
+    <link rel="stylesheet" type="text/css" href="./css/saeshin_css.css" >
     <title>Saeshin United</title>
 </head>
-<script>
-    function test() {
-        //alert("!!!!!!!!1");
-        //location.href="/after_insert/aft_insert.html";
-      setTimeout("location.href='./aft_insert.html'",0);
+<!-- <script>
+    function confirmInput() {
+      //fname = document.forms[0].fname.value;
+      alert("등록되었습니");
     }
-</script>
+</script> -->
 <body>
-    <div id="wrap">14L24
-        <img src="./세신유나이티드_로고.png"/>
+    <div id="wrap">
+        <img src="./img/세신유나이티드_로고.png"/>
         <hr>
         <form action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+        <!-- <form onsubmit="confirmInput()" action="https://solomontechnosupply3--saeshin.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST"> -->
             <!-- <input type="hidden" name="debug" value="1">  -->
             <input type="hidden" name="orgid" value="00D0p0000000TBl">
-            <!-- <input type="hidden" name="retURL" value="http://saeshinmall.com/board/product/write.html?board_no=6"> -->
+            <input type="hidden" name="retURL" value="http://saeshinmall.com/board/product/list.html?board_no=6">
             <!-- <input type="hidden" name="retURL" value="/after_insert/aft_insert.html"> -->
             <table border="1" summary>
                 <tr>
@@ -33,7 +33,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>제목</th>
+                    <th>제!목</th>
                     <td colspan="3"><input id="subject" name="subject" type="text"></td>
                 </tr>
                 <tr>
@@ -64,8 +64,9 @@
             </table>
             <hr>
             <div class="btn" id="backBtn">
+                <!-- <input type="button" value="test01" onclick="test()"> -->
                 <input type="submit" name="" value="목록">
-                <input type="submit" name="submit" value="등록" onclick="test()">
+                <input type="submit" name="submit" value="등록">
                 <input type="submit" name="" value="취소">
             </div>
         </form>
